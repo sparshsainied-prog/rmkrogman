@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>R.M. Krogman, The Keepers of Midgate</title>
+<meta name="description" content="A homepage idea for R.M. Krogman's The Keepers of Midgate, made by Sparsh Saini. Not her official site.">
+<meta property="og:title" content="A homepage for R.M. Krogman, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for R.M. Krogman's The Keepers of Midgate, made by Sparsh Saini. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/rmkrogman/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rust: #5a2418;
+  --ember: #c4562e;
+  --dusk: #2a1611;
+  --deep: #1b0e0b;
+  --bone: #eee3d0;
+  --silver: #c9c6c2;
+  --ink: #2a1611;
+  --muted: #6e5a4c;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bone); color: var(--ink); font: 400 1.0625rem/1.6 "Source Serif 4", Georgia, serif; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { width: min(100% - 32px, 1120px); margin-inline: auto; }
+h1, h2, h3, .display { font-family: Marcellus, "Times New Roman", serif; font-weight: 400; line-height: 1.08; margin: 0; }
+
+.topstrip { background: var(--deep); color: var(--silver); font-size: .84rem; padding: .55rem 0; text-align: center; border-bottom: 1px solid #3b231b; }
+
+/* first screen */
+.hero { background: var(--rust); color: var(--bone); padding: 2rem 0 3rem; }
+.hero .wrap { display: grid; gap: 2rem; }
+.mast { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: .95rem; }
+.mast .name { font-family: Marcellus, serif; font-size: 1.25rem; letter-spacing: .04em; }
+.mast nav { display: flex; gap: 1rem; }
+.mast nav a { text-decoration: none; border-bottom: 1px solid rgba(238,227,208,.4); }
+.hero h1 { font-size: clamp(2.6rem, 11vw, 5rem); letter-spacing: .01em; }
+.hero h1 span { display: block; }
+.hero h1 .kill { color: #f0a17c; }
+.hero .line { font-size: 1.2rem; max-width: 40ch; margin: 1.25rem 0 0; }
+.hero .line strong { font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.75rem; align-items: center; }
+.btn { display: inline-block; background: var(--bone); color: var(--dusk); padding: .8rem 1.3rem; text-decoration: none; font-weight: 600; border-radius: 2px; }
+.cta .plain { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.cover { width: min(68vw, 300px); justify-self: center; box-shadow: 0 24px 50px rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.3); }
+
+/* shelf */
+.shelf { background: var(--bone); padding: 4rem 0 3.5rem; }
+.shelf h2, .world h2, .find h2, .extras h2, .about h2 { font-size: clamp(2rem, 6vw, 3rem); }
+.shelf .intro { max-width: 52ch; margin: 1rem 0 2.5rem; }
+.books { list-style: none; margin: 0; padding: 0; }
+.book { display: grid; grid-template-columns: 110px 1fr; gap: 1.25rem; align-items: start; padding: 1.5rem 0; border-top: 1px solid #cdbca3; }
+.book:last-child { border-bottom: 1px solid #cdbca3; }
+.book img { box-shadow: 0 10px 20px rgba(42,22,17,.3); }
+.book .num { font-family: Marcellus, serif; color: var(--ember); font-size: 1rem; }
+.book h3 { font-size: 1.9rem; margin: .1rem 0 .4rem; }
+.book p { margin: 0; color: var(--muted); }
+.book.prequel { grid-template-columns: 1fr; }
+.book.prequel h3 { font-style: normal; }
+.book blockquote { margin: .6rem 0 0; font-style: italic; color: var(--ink); }
+.book blockquote cite { font-style: normal; color: var(--muted); font-size: .92rem; }
+.blurb { background: var(--dusk); color: var(--bone); padding: 1.5rem 1.25rem; margin-top: 1.5rem; }
+.book .blurb p { margin: 0 0 .9rem; color: var(--bone); }
+.blurb p:last-child { margin: 0; font-family: Marcellus, serif; font-size: 1.35rem; line-height: 1.3; }
+
+/* world */
+.world { background: var(--deep); color: var(--bone); padding: 4rem 0; }
+.world p.lead { max-width: 54ch; color: var(--silver); margin: 1rem 0 2.5rem; }
+.reach { list-style: none; margin: 0; padding: 0; font-family: Marcellus, serif; font-size: clamp(1.7rem, 7vw, 3.6rem); line-height: 1.15; }
+.reach li:nth-child(1) { color: #e38a5c; }
+.reach li:nth-child(2) { color: #8fa3ad; padding-left: 8%; }
+.reach li:nth-child(3) { color: var(--bone); padding-left: 16%; }
+.reach li:nth-child(4) { color: #d7c39c; padding-left: 4%; }
+.reach li:nth-child(5) { color: var(--silver); padding-left: 22%; }
+
+/* what you'll find */
+.find { padding: 4rem 0; }
+.find ul { list-style: none; margin: 2rem 0 0; padding: 0; columns: 1; }
+.find li { padding: .7rem 0; border-bottom: 1px solid #cdbca3; break-inside: avoid; }
+.find .small { margin-top: 1.25rem; color: var(--muted); }
+
+/* extras */
+.extras { background: var(--ember); color: #1f0f0a; padding: 4rem 0; }
+.extras .pair { display: grid; gap: 2.5rem; margin-top: 2rem; }
+.extras h3 { font-size: 1.7rem; margin-bottom: .5rem; }
+.extras p { margin: 0 0 1rem; max-width: 44ch; }
+.extras a.go { font-weight: 600; text-underline-offset: 3px; }
+
+/* about */
+.about { padding: 4rem 0; }
+.about .said { font-family: Marcellus, serif; font-size: clamp(1.6rem, 5vw, 2.4rem); line-height: 1.25; max-width: 26ch; margin: 1.5rem 0; }
+.about p { max-width: 56ch; }
+.about .ig { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: baseline; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid #cdbca3; }
+.about .ig a { font-family: Marcellus, serif; font-size: 1.5rem; }
+
+footer { background: var(--deep); color: var(--silver); padding: 2rem 0 2.5rem; font-size: .92rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+
+@media (min-width: 760px) {
+  .hero { padding: 2rem 0 5rem; }
+  .hero .wrap { grid-template-columns: 1fr 320px; column-gap: 4rem; }
+  .mast { grid-column: 1 / -1; margin-bottom: 2rem; }
+  .cover { width: 320px; align-self: center; }
+  .book { grid-template-columns: 160px 1fr; gap: 2.5rem; }
+  .book.prequel { grid-template-columns: 160px 1fr; }
+  .book.prequel > div { grid-column: 2; }
+  .find ul { columns: 2; column-gap: 3rem; }
+  .extras .pair { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .world .wrap, .about .wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: start; }
+}
+</style>
+</head>
+<body>
+<div class="topstrip"><div class="wrap">A homepage idea made by Sparsh Saini for R.M. Krogman. Not her official site.</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mast">
+      <span class="name">R.M. Krogman</span>
+      <nav><a href="#books">Books</a><a href="#free">Free novella</a><a href="https://rmkrogman.com">Shop</a></nav>
+    </div>
+    <div>
+      <h1><span>Freedom to live.</span><span class="kill">Freedom to kill.</span></h1>
+      <p class="line"><strong>The Keepers of Midgate.</strong> Complete, and on Kindle Unlimited.</p>
+      <div class="cta">
+        <a class="btn" href="#books">Start with Liberation</a>
+        <a class="plain" href="#free">Or read the free novella</a>
+      </div>
+    </div>
+    <img class="cover" src="img/liberation.jpg" width="700" height="1120" alt="Cover of Liberation, The Keepers of Midgate book one: hooded riders under a dusky red sky, a woman in red, magic light.">
+  </div>
+</header>
+
+<main>
+<section class="shelf" id="books">
+  <div class="wrap">
+    <h2>The series, in reading order</h2>
+    <p class="intro">Dark epic fantasy across land and sea. The series is complete and on Kindle Unlimited.</p>
+    <ol class="books">
+      <li class="book">
+        <img src="img/liberation.jpg" width="700" height="1120" alt="Cover of Liberation" loading="lazy">
+        <div>
+          <span class="num">Book one</span>
+          <h3>Liberation</h3>
+          <p>Published September 5, 2023. 760 pages.</p>
+          <div class="blurb">
+            <p>Freedom. One might sacrifice almost anything to get it. Freedom from the bonds of society. Freedom from fear. Freedom from captivity.</p>
+            <p>But freedom is not enough with darkness infecting the Middle Gate. A terrifying madness paints the streets with commoner's blood, enemies harry the borders, and those able must fight. Those gifted must find their magic and take heart, for the greatest battles are yet to come.</p>
+            <p>The imprisoned must survive. The suffocated must breathe. The subdued must rise.</p>
+          </div>
+        </div>
+      </li>
+      <li class="book">
+        <img src="img/sundering.jpg" width="562" height="900" alt="Cover of Sundering" loading="lazy">
+        <div>
+          <span class="num">Book two</span>
+          <h3>Sundering</h3>
+          <p>Published May 11, 2024.</p>
+        </div>
+      </li>
+      <li class="book">
+        <img src="img/schism.jpg" width="563" height="900" alt="Cover of Schism: Part One" loading="lazy">
+        <div>
+          <span class="num">Book three</span>
+          <h3>Schism</h3>
+          <p>The series ends here.</p>
+        </div>
+      </li>
+      <li class="book prequel">
+        <div>
+          <span class="num">Prequel novella</span>
+          <h3>Myrmaiden</h3>
+          <blockquote>"another tragic prequel to the Midgate series, giving us a closer look at Yuki's life" <cite>@sarahreads81</cite></blockquote>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="world">
+  <div class="wrap">
+    <div>
+      <h2>A world pulsing with magic, violence, and a spreading plague of madness</h2>
+      <p class="lead">The Keepers of Midgate spans land and sea.</p>
+    </div>
+    <ul class="reach">
+      <li>From dusty deserts of Fire</li>
+      <li>to the deepest ocean trenches,</li>
+      <li>from snowy mountains</li>
+      <li>and vast plains</li>
+      <li>to the glorious sky above.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap">
+    <h2>What you'll find in my books</h2>
+    <ul>
+      <li>Multiple third-person POV</li>
+      <li>Parallel character-driven plot lines</li>
+      <li>Adult fantasy, not YA</li>
+      <li>Dragonriders</li>
+      <li>Medieval societies with race- and social rank-based conflicts</li>
+      <li>Tragic and mysterious backstories</li>
+      <li>Lost princes and conflicted princesses</li>
+      <li>Women with swords and magic</li>
+      <li>Cinnamon roll men and men who fall first/harder</li>
+      <li>Mysterious plots and a nebulous evil</li>
+      <li>Romance subplot, mostly fade-to-black (but not always)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="extras" id="free">
+  <div class="wrap">
+    <h2>A free novella and special editions</h2>
+    <div class="pair">
+      <div>
+        <h3>A free novella</h3>
+        <p>There is a free novella. Ask on Instagram or look in the Free Novella highlight.</p>
+        <a class="go" href="https://www.instagram.com/r.m.krogman/">Find it on my Instagram</a>
+      </div>
+      <div>
+        <h3>Special editions</h3>
+        <p>Special editions are in the shop.</p>
+        <a class="go" href="https://rmkrogman.com">Visit the shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div>
+      <p class="said">I'm Rebecca, author of the epic fantasy series The Keepers of Midgate and numerous novellas and short stories.</p>
+      <p>Ambitious dark fantasy, epic stakes, gorgeous worlds. I also run a Discord for dark fantasy authors.</p>
+      <div class="ig">
+        <a href="https://www.instagram.com/r.m.krogman/">@r.m.krogman</a>
+        <span>on Instagram, where the free novella and special editions live.</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>A mockup made by Sparsh Saini for R.M. Krogman. Not affiliated, not live. The covers and words are hers.</span>
+    <nav><a href="https://rmkrogman.com">Shop</a><a href="https://www.goodreads.com/series/370402-the-keepers-of-midgate">Goodreads</a><a href="https://www.instagram.com/r.m.krogman/">Instagram</a></nav>
+  </div>
+</footer>
+</body>
+</html>
